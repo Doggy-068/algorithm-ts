@@ -45,6 +45,27 @@ class Sort {
     }
     return arr
   }
+
+  /**
+   * 从左至右取数；
+   * 取出数与左数比较，取出数小则交换位置，直至不满足交换条件停止比较；
+   * 时间复杂度 O(n²)
+   * @description 插入排序
+   */
+  static Insert(arr: number[]): number[] {
+    for (let i = 0; i < arr.length; i++) {
+      for (let j = i + 1; j > 0; j--) {
+        if (arr[j] < arr[j - 1]) {
+          const tmp = arr[j]
+          arr[j] = arr[i]
+          arr[i] = tmp
+        } else {
+          break
+        }
+      }
+    }
+    return arr
+  }
 }
 
 export default Sort
