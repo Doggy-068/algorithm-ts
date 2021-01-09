@@ -1,4 +1,6 @@
 //编写算法
-function func(){
+function func() {
 
 }
+
+export default func
